@@ -1,0 +1,16 @@
+{
+  "homeTitle": "Acasă",
+  "homeScreen": {
+    "title": "Acasă",
+    "button": "Afișează Detalii"
+  },
+  "changeLanguage": "Schimbare limbă",
+  "detailsTitle": "Detalii",
+  "detailsScreen": {
+    "title": "Se afișează detalii pentru utilizatorul {{name}}"
+  },
+   "editScreen": {
+    "title": "Deschide fișierul de cod pentru acest ecran:",
+    "description": "Modifică orice text, salvează fișierul și aplicația ta se va actualiza automat."
+  }
+}
