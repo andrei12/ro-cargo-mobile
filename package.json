@@ -2,12 +2,17 @@
   "name": "ro-cargo-mobile",
   "version": "1.0.0",
   "main": "expo-router/entry",
+  "engines": {
+    "node": ">=20.18.1",
+    "yarn": ">=1.22.0"
+  },
   "scripts": {
     "android": "expo start --android",
     "ios": "expo start --ios",
     "start": "expo start",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
+    "typecheck": "tsc --noEmit",
     "web": "expo start --web",
     "openapi-ts": "openapi-ts"
   },

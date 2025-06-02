@@ -3,14 +3,13 @@
   "homeScreen": {
     "title": "Home",
     "button": "Show Details"
-   
   },
-   "changeLanguage": "Change Language",
+  "changeLanguage": "Change Language",
   "detailsTitle": "Details",
   "detailsScreen": {
     "title": "Showing details for user {{name}}"
   },
-    "editScreen": {
+  "editScreen": {
     "title": "Open up the code for this screen:",
     "description": "Change any of the text, save the file, and your app will automatically update."
   }

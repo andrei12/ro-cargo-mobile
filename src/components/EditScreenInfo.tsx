@@ -3,9 +3,6 @@ import { useTranslation } from 'react-i18next';
 
 export default function EditScreenInfo({ path }: { path: string }) {
   const { t } = useTranslation();
-  const title = 'Open up the code for this screen:';
-  const description =
-    'Change any of the text, save the file, and your app will automatically update.';
 
   return (
     <View style={styles.getStartedContainer}>

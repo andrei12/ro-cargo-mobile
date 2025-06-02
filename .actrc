@@ -1,0 +1,9 @@
+# Act configuration for ro-cargo-mobile
+# Use more specific platform images for better compatibility
+-P ubuntu-latest=catthehacker/ubuntu:act-latest
+
+# Set platform architecture (useful for M1 Macs)
+--container-architecture linux/amd64
+
+# Use host network (helpful for some React Native tools)
+--use-gitignore 

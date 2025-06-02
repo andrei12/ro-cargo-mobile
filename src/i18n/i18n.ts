@@ -21,6 +21,7 @@ const languageDetector = {
   },
 };
 
+// eslint-disable-next-line import/no-named-as-default-member
 i18n
   .use(languageDetector as any) // Use the custom language detector
   .use(initReactI18next) // Passes i18n instance to react-i18next
