@@ -8,12 +8,15 @@
     "start": "expo start",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "openapi-ts": "openapi-ts"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
+    "@hey-api/client-fetch": "^0.11.0",
     "@react-native-async-storage/async-storage": "^2.1.2",
     "@react-navigation/native": "^7.0.3",
+    "@tanstack/react-query": "^5.79.0",
     "expo": "^53.0.9",
     "expo-constants": "~17.1.4",
     "expo-linking": "~7.1.4",
@@ -34,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@hey-api/openapi-ts": "^0.69.1",
     "@types/react": "~19.0.10",
     "eslint": "^9.25.1",
     "eslint-config-expo": "^9.2.0",
