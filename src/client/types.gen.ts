@@ -1107,19 +1107,19 @@ export type GetOrdersData = {
 
 export type GetOrdersErrors = {
   /**
-   * Authentication required. Please provide a valid Bearer token to access order information.
+   * Authentication required. Please provide a valid Bearer token to access orders.
    */
   401: {
     message: string;
   };
   /**
-   * Access denied. Your account may be inactive or lack sufficient permissions to view orders.
+   * Access denied. Users can only access orders based on their role: customers see their own orders, drivers see pending orders, admins see all orders.
    */
   403: {
     message: string;
   };
   /**
-   * Invalid query parameters. Common issues include: invalid pagination parameters (page must be >= 1, limit must be between 1 and 100), invalid filter values (dates, numbers, enum values), or malformed sort parameters.
+   * Invalid query parameters provided. Please check the filtering, sorting, and pagination parameters format.
    */
   422: {
     success: boolean;
@@ -1138,7 +1138,7 @@ export type GetOrdersError = GetOrdersErrors[keyof GetOrdersErrors];
 
 export type GetOrdersResponses = {
   /**
-   * Successfully retrieved paginated and filtered orders based on user role. Customers receive their created orders, drivers receive filtered pending orders (with customer details only for assigned orders), and admins receive all filtered orders in the system. Each order includes complete delivery details, status, and timing information. The response includes pagination metadata and applied filters for navigation.
+   * Successfully retrieved orders list. The response includes paginated order data with complete delivery information, customer and driver details (based on user role and access permissions), and comprehensive metadata for pagination navigation.
    */
   200: {
     data: {
@@ -1158,7 +1158,7 @@ export type GetOrdersResponses = {
       ff: boolean;
       createdAt: string | null;
       updatedAt: string | null;
-    }[];
+    };
     meta: {
       page: number;
       limit: number;
@@ -1918,7 +1918,7 @@ export type PatchDriverApplicationsByIdErrors = {
     message: string;
   };
   /**
-   * Invalid application ID format or status value provided in the request
+   * Invalid application ID format provided in the request parameters. The ID must be a valid integer.
    */
   422: {
     success: boolean;

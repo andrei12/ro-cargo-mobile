@@ -14,11 +14,14 @@
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
     "typecheck": "tsc --noEmit",
     "web": "expo start --web",
-    "openapi-ts": "openapi-ts"
+    "openapi-ts": "openapi-ts",
+    "openapi-zod": "openapi-zod-client https://ro-cargo-api.dreambigg.workers.dev/doc -o ./src/client/zod-client.ts",
+    "postinstall": "openapi-zod && openapi-ts"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
     "@hey-api/client-fetch": "^0.11.0",
+    "@hookform/resolvers": "^5.0.1",
     "@react-native-async-storage/async-storage": "^2.1.2",
     "@react-navigation/native": "^7.0.3",
     "@tanstack/react-query": "^5.79.0",
@@ -26,19 +29,22 @@
     "expo-constants": "~17.1.4",
     "expo-linking": "~7.1.4",
     "expo-router": "~5.0.3",
+    "expo-secure-store": "~14.2.3",
     "expo-status-bar": "~2.2.3",
     "expo-system-ui": "~5.0.6",
     "expo-web-browser": "~14.1.6",
     "i18next": "^25.2.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-hook-form": "^7.57.0",
     "react-i18next": "^15.5.2",
     "react-native": "0.79.2",
     "react-native-gesture-handler": "~2.24.0",
     "react-native-reanimated": "~3.17.4",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.10.0",
-    "react-native-web": "^0.20.0"
+    "react-native-web": "^0.20.0",
+    "zod": "^3.25.51"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -47,6 +53,7 @@
     "eslint": "^9.25.1",
     "eslint-config-expo": "^9.2.0",
     "eslint-config-prettier": "^10.1.2",
+    "openapi-zod-client": "^1.18.3",
     "prettier": "^3.2.5",
     "typescript": "~5.8.3"
   },
